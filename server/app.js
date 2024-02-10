@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
+require('dotenv').config({ path: './config.env' });
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -37,5 +39,16 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+const uri = process.env.ATLAS_URI;
+
+mongoose
+  .connect(uri)
+  .then(() => {
+    console.log('Successfully connected to MongoDB.');
+  })
+  .catch((err) => {
+    console.error('Error connecting to MongoDB:', err);
+  });
 
 module.exports = app;
