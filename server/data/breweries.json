@@ -1,0 +1,82 @@
+[
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff1"},
+        "name": "Zmajska Pivovara",
+        "location": "Zagreb, Hrvatska",
+        "image": "zmajska.jpg",
+        "description": "Zmajska pivovara je jedna od najpoznatijih craft pivovara u Hrvatskoj.",
+        "website": "http://www.zmajska-pivovara.hr"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff2"},
+        "name": "The Garden Brewery",
+        "location": "Zagreb, Hrvatska",
+        "image": "garden-brewery.jpg",
+        "description": "The Garden Brewery je pivovara poznata po inovativnim recepturama i eventima.",
+        "website": "https://thegarden.hr"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff3"},
+        "name": "Nova Runda",
+        "location": "Split, Hrvatska",
+        "image": "nova-runda.jpg",
+        "description": "Nova Runda je craft pivovara sa sjedištem u Splitu.",
+        "website": "http://www.novarunda.hr"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff4"},
+        "name": "Varionica",
+        "location": "Zagreb, Hrvatska",
+        "image": "varionica.jpg",
+        "description": "Varionica je craft pivovara koja se nalazi u Zagrebu.",
+        "website": "http://www.varionica.com"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff5"},
+        "name": "San Servolo",
+        "location": "Buje, Hrvatska",
+        "image": "san-servolo.jpg",
+        "description": "San Servolo je craft pivovara koja se nalazi u Istri.",
+        "website": "http://www.sanservolo.com"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff6"},
+        "name": "Pivovara Medvedgrad",
+        "location": "Zagreb, Hrvatska",
+        "image": "medvedgrad.jpg",
+        "description": "Pivovara Medvedgrad je jedna od najpoznatijih pivovara u Hrvatskoj.",
+        "website": "http://www.medvedgrad.hr"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff7"},
+        "name": "Pivovara Lepi Dečki",
+        "location": "Zagreb, Hrvatska",
+        "image": "lepi-decki.jpg",
+        "description": "Pivovara Lepi Dečki je craft pivovara koja se nalazi u Zagrebu.",
+        "website": "http://www.lepidecki.com"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff8"},
+        "name": "Pivovara 5th Element",
+        "location": "Zagreb, Hrvatska",
+        "image": "5th-element.jpg",
+        "description": "Pivovara 5th Element je craft pivovara koja se nalazi u Zagrebu.",
+        "website": "http://www.5thelement.com"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ff9"},
+        "name": "Pivovara Vukovarska",
+        "location": "Vukovar, Hrvatska",
+        "image": "vukovarska.jpg",
+        "description": "Pivovara Vukovarska je craft pivovara koja se nalazi u Vukovaru.",
+        "website": "http://www.vukovarska.com"
+    },
+    {
+        "_id": {"$oid": "65c7b86319c08024b60f3ffa"},
+        "name": "Pivovara Daruvar",
+        "location": "Daruvar, Hrvatska",
+        "image": "daruvar.jpg",
+        "description": "Pivovara Daruvar je craft pivovara koja se nalazi u Daruvaru.",
+        "website": "http://www.daruvar.com"
+    }
+]

@@ -1,0 +1,132 @@
+[
+    {
+        "name": "Zmajsko Pale Ale",
+        "style": "Pale Ale",
+        "image": "zmajsko_pale_ale.jpg",
+        "abv": 5.5,
+        "ibu": 35,
+        "description": "Zmajsko Pale Ale je osvježavajuće pivo s naglašenim aromama hmelja.",
+        "price": 25.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+    },
+    {
+        "name": "Zmajsko Stout",
+        "style": "Stout",
+        "image": "zmajsko_stout.jpg",
+        "abv": 6.2,
+        "ibu": 40,
+        "description": "Zmajsko Stout je tamno pivo s bogatim okusom čokolade i kave.",
+        "price": 28.75,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+    },
+    {
+        "name": "Zmajsko IPA",
+        "style": "IPA",
+        "image": "zmajsko_ipa.jpg",
+        "abv": 6.5,
+        "ibu": 50,
+        "description": "Zmajsko IPA je klasično američko pivo s naglašenom hmeljnom aromom.",
+        "price": 29.75,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+    },
+    {
+        "name": "Zmajsko Lager",
+        "style": "Lager",
+        "image": "zmajsko_lager.jpg",
+        "abv": 4.5,
+        "ibu": 20,
+        "description": "Zmajsko Lager je svijetlo pivo s blagim okusom i niskim udjelom alkohola.",
+        "price": 23.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+    },
+    {
+        "name": "Garden Session IPA",
+        "style": "Session IPA",
+        "image": "garden_session_ipa.jpg",
+        "abv": 4.5,
+        "ibu": 30,
+        "description": "Garden Session IPA je osvježavajuće pivo s naglašenim aromama hmelja.",
+        "price": 25.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden Pale Ale",
+        "style": "Pale Ale",
+        "image": "garden_pale_ale.jpg",
+        "abv": 5.2,
+        "ibu": 30,
+        "description": "Garden Pale Ale je osvježavajuće pivo s voćnim notama.",
+        "price": 26.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden IPA",
+        "style": "IPA",
+        "image": "garden_ipa.jpg",
+        "abv": 6.5,
+        "ibu": 50,
+        "description": "Garden IPA je klasično američko pivo s naglašenom hmeljnom aromom.",
+        "price": 29.75,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden Stout",
+        "style": "Stout",
+        "image": "garden_stout.jpg",
+        "abv": 6.2,
+        "ibu": 40,
+        "description": "Garden Stout je tamno pivo s bogatim okusom čokolade i kave.",
+        "price": 28.75,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden Lager",
+        "style": "Lager",
+        "image": "garden_lager.jpg",
+        "abv": 4.5,
+        "ibu": 20,
+        "description": "Garden Lager je svijetlo pivo s blagim okusom i niskim udjelom alkohola.",
+        "price": 23.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden Radler",
+        "style": "Radler",
+        "image": "garden_radler.jpg",
+        "abv": 2.5,
+        "ibu": 10,
+        "description": "Garden Radler je osvježavajuće pivo s dodatkom limuna.",
+        "price": 22.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden Weizen",
+        "style": "Weizen",
+        "image": "garden_weizen.jpg",
+        "abv": 5.0,
+        "ibu": 15,
+        "description": "Garden Weizen je pšenično pivo s voćnim notama.",
+        "price": 24.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden APA",
+        "style": "APA",
+        "image": "garden_apa.jpg",
+        "abv": 5.5,
+        "ibu": 35,
+        "description": "Garden APA je osvježavajuće pivo s naglašenim aromama hmelja.",
+        "price": 25.5,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Garden NEIPA",
+        "style": "NEIPA",
+        "image": "garden_neipa.jpg",
+        "abv": 6.5,
+        "ibu": 50,
+        "description": "Garden NEIPA je klasično američko pivo s naglašenom hmeljnom aromom.",
+        "price": 29.75,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    }
+]

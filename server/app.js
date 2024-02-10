@@ -8,6 +8,8 @@ require('dotenv').config({ path: './config.env' });
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var beersRouter = require('./routes/beers');
+var breweriesRouter = require('./routes/breweries');
 
 var app = express();
 
@@ -21,8 +23,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', indexRouter); // http://localhost:5000/
+app.use('/users', usersRouter); // http://localhost:5000/users
+app.use('/beers', beersRouter); // http://localhost:5000/beers
+app.use('/breweries', breweriesRouter); // http://localhost:5000/breweries
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
