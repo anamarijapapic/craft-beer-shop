@@ -4,9 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config({ path: './config.env' });
 
 var indexRouter = require('./routes/index');
+var authRouter = require('./routes/auth');
 var usersRouter = require('./routes/users');
 var beersRouter = require('./routes/beers');
 var breweriesRouter = require('./routes/breweries');
@@ -23,7 +25,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('*', cors({
+  origin: ['http://localhost:3000'],
+  credentials: true
+}));
+
 app.use('/', indexRouter); // http://localhost:5000/
+app.use('/auth', authRouter); // http://localhost:5000/auth
 app.use('/users', usersRouter); // http://localhost:5000/users
 app.use('/beers', beersRouter); // http://localhost:5000/beers
 app.use('/breweries', breweriesRouter); // http://localhost:5000/breweries

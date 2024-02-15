@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 const beerController = require('../controllers/beers');
+const requireAuth = require('../middleware/requireAuth');
+
+router.use(requireAuth);
 
 router.get('/', beerController.getBeers);
 router.get('/:id', beerController.getBeer);

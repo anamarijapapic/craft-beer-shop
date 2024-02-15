@@ -4,6 +4,11 @@ const Brewery = require('../models/brewery');
 exports.getBeers = async (req, res) => {
     try {
         const beers = await Beer.find().populate('brewery');
+
+        if (req.query.sortBy === 'breweryName') {
+            beers.sort((a, b) => a.brewery.name.localeCompare(b.brewery.name));
+        }
+
         res.json(beers);
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -45,7 +50,7 @@ exports.createBeer = async (req, res) => {
         const savedBeer = await newBeer.save();
 
         // Populate the brewery field in the response
-        await savedBeer.populate('brewery').execPopulate();
+        await savedBeer.populate('brewery');
 
         res.status(201).json(savedBeer);
     } catch (error) {
@@ -83,7 +88,7 @@ exports.updateBeer = async (req, res) => {
         const updatedBeer = await beer.save();
 
         // Populate the brewery field in the response
-        await updatedBeer.populate('brewery').execPopulate();
+        await updatedBeer.populate('brewery');
 
         res.json(updatedBeer);
     } catch (error) {

@@ -1,82 +1,50 @@
 [
     {
         "_id": {"$oid": "65c7b86319c08024b60f3ff1"},
-        "name": "Zmajska Pivovara",
-        "location": "Zagreb, Hrvatska",
-        "image": "zmajska.jpg",
-        "description": "Zmajska pivovara je jedna od najpoznatijih craft pivovara u Hrvatskoj.",
-        "website": "http://www.zmajska-pivovara.hr"
+        "name": "Brlog",
+        "location": "Zadar, Hrvatska",
+        "image": "https://cdn-kaaed.nitrocdn.com/fQIRFYprtEDISfMJxIkYXnfrkKBNCzYR/assets/images/optimized/rev-586c2a8/brlog.hr/wp-content/uploads/2021/12/Brlog-crni-logo-bez-pozadine.png",
+        "description": "Mi smo Brlog zadružna pivovara: mali, nezavisni i društveno odgovorni kolektiv posvećen craft pivu.",
+        "website": "https://brlog.hr/"
     },
     {
         "_id": {"$oid": "65c7b86319c08024b60f3ff2"},
-        "name": "The Garden Brewery",
-        "location": "Zagreb, Hrvatska",
-        "image": "garden-brewery.jpg",
-        "description": "The Garden Brewery je pivovara poznata po inovativnim recepturama i eventima.",
-        "website": "https://thegarden.hr"
+        "name": "Familia",
+        "location": "Kaštel Gomilica, Hrvatska",
+        "image": "https://familia.hr/wp/wp-content/uploads/2017/07/logo-horizontal-black.png",
+        "description": "Mi smo Marina i Darko, zaljubljenici u život, pivo i homebrewing. Pivo nam je oduvijek u srcu, a od 2011. i dio našeg doma. 2019. nastaje Familia Craft pivovara – craft pivovara s dušom.",
+        "website": "https://familia.hr/"
     },
     {
         "_id": {"$oid": "65c7b86319c08024b60f3ff3"},
-        "name": "Nova Runda",
-        "location": "Split, Hrvatska",
-        "image": "nova-runda.jpg",
-        "description": "Nova Runda je craft pivovara sa sjedištem u Splitu.",
-        "website": "http://www.novarunda.hr"
+        "name": "Pivovara Medvedgrad",
+        "location": "Zagreb, Hrvatska",
+        "image": "https://shop.pivovara-medvedgrad.hr/wp-content/uploads/2020/05/apple-touch-icon.png",
+        "description": "Najveća smo hrvatska craft pivovara koja od 1994. godine kuha ukusne i prirodne lagere na tradicionalan način.",
+        "website": "https://pivovara-medvedgrad.hr/"
     },
     {
         "_id": {"$oid": "65c7b86319c08024b60f3ff4"},
-        "name": "Varionica",
-        "location": "Zagreb, Hrvatska",
-        "image": "varionica.jpg",
-        "description": "Varionica je craft pivovara koja se nalazi u Zagrebu.",
-        "website": "http://www.varionica.com"
+        "name": "Tap B Craft Brewery",
+        "location": "Split, Hrvatska",
+        "image": "https://www.tapb.hr/wp-content/uploads/2018/03/TapBlogo12-640x640.png",
+        "description": "Iskusni osnivači pivovare koje su svoje znanje stekli dugogodišnjim kuhanjem piva kod kuće, odabrali su za vas najkvalitetnije sirovine koje dolaze sa čak tri kontinenta.",
+        "website": "https://www.tapb.hr/"
     },
     {
         "_id": {"$oid": "65c7b86319c08024b60f3ff5"},
-        "name": "San Servolo",
-        "location": "Buje, Hrvatska",
-        "image": "san-servolo.jpg",
-        "description": "San Servolo je craft pivovara koja se nalazi u Istri.",
-        "website": "http://www.sanservolo.com"
+        "name": "The Garden Brewery",
+        "location": "Zagreb, Hrvatska",
+        "image": "https://thegarden.hr/app/uploads/2021/04/the-garden-logo-1.svg",
+        "description": "The Garden Brewery is an award-winning micro-brewery based in Zagreb, Croatia.",
+        "website": "https://thegarden.hr/"
     },
     {
         "_id": {"$oid": "65c7b86319c08024b60f3ff6"},
-        "name": "Pivovara Medvedgrad",
+        "name": "Zmajska pivovara",
         "location": "Zagreb, Hrvatska",
-        "image": "medvedgrad.jpg",
-        "description": "Pivovara Medvedgrad je jedna od najpoznatijih pivovara u Hrvatskoj.",
-        "website": "http://www.medvedgrad.hr"
-    },
-    {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff7"},
-        "name": "Pivovara Lepi Dečki",
-        "location": "Zagreb, Hrvatska",
-        "image": "lepi-decki.jpg",
-        "description": "Pivovara Lepi Dečki je craft pivovara koja se nalazi u Zagrebu.",
-        "website": "http://www.lepidecki.com"
-    },
-    {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff8"},
-        "name": "Pivovara 5th Element",
-        "location": "Zagreb, Hrvatska",
-        "image": "5th-element.jpg",
-        "description": "Pivovara 5th Element je craft pivovara koja se nalazi u Zagrebu.",
-        "website": "http://www.5thelement.com"
-    },
-    {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff9"},
-        "name": "Pivovara Vukovarska",
-        "location": "Vukovar, Hrvatska",
-        "image": "vukovarska.jpg",
-        "description": "Pivovara Vukovarska je craft pivovara koja se nalazi u Vukovaru.",
-        "website": "http://www.vukovarska.com"
-    },
-    {
-        "_id": {"$oid": "65c7b86319c08024b60f3ffa"},
-        "name": "Pivovara Daruvar",
-        "location": "Daruvar, Hrvatska",
-        "image": "daruvar.jpg",
-        "description": "Pivovara Daruvar je craft pivovara koja se nalazi u Daruvaru.",
-        "website": "http://www.daruvar.com"
+        "image": "https://zmajskapivovara.hr/wp-content/themes/ZmajskaPivovara01/images/zmajska_logo500px.PNG",
+        "description": "Zmajska pivovara nastala je 2013. godine kao rezultat dugogodišnje strasti prema vrhunskome pivu. Kao pioniri crafta u Hrvatskoj, ponosni na svoje homebrew korijene, njegujemo neovisnost, kreativnost i inovativnost u kuhanju piva.",
+        "website": "https://zmajskapivovara.hr/"
     }
 ]

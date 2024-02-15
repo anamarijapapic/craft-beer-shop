@@ -1,132 +1,212 @@
 [
     {
-        "name": "Zmajsko Pale Ale",
-        "style": "Pale Ale",
-        "image": "zmajsko_pale_ale.jpg",
-        "abv": 5.5,
-        "ibu": 35,
-        "description": "Zmajsko Pale Ale je osvježavajuće pivo s naglašenim aromama hmelja.",
-        "price": 25.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
-    },
-    {
-        "name": "Zmajsko Stout",
-        "style": "Stout",
-        "image": "zmajsko_stout.jpg",
-        "abv": 6.2,
-        "ibu": 40,
-        "description": "Zmajsko Stout je tamno pivo s bogatim okusom čokolade i kave.",
-        "price": 28.75,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
-    },
-    {
-        "name": "Zmajsko IPA",
-        "style": "IPA",
-        "image": "zmajsko_ipa.jpg",
-        "abv": 6.5,
-        "ibu": 50,
-        "description": "Zmajsko IPA je klasično američko pivo s naglašenom hmeljnom aromom.",
-        "price": 29.75,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
-    },
-    {
-        "name": "Zmajsko Lager",
-        "style": "Lager",
-        "image": "zmajsko_lager.jpg",
-        "abv": 4.5,
-        "ibu": 20,
-        "description": "Zmajsko Lager je svijetlo pivo s blagim okusom i niskim udjelom alkohola.",
-        "price": 23.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
-    },
-    {
-        "name": "Garden Session IPA",
-        "style": "Session IPA",
-        "image": "garden_session_ipa.jpg",
-        "abv": 4.5,
-        "ibu": 30,
-        "description": "Garden Session IPA je osvježavajuće pivo s naglašenim aromama hmelja.",
-        "price": 25.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
-    },
-    {
-        "name": "Garden Pale Ale",
-        "style": "Pale Ale",
-        "image": "garden_pale_ale.jpg",
-        "abv": 5.2,
-        "ibu": 30,
-        "description": "Garden Pale Ale je osvježavajuće pivo s voćnim notama.",
-        "price": 26.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
-    },
-    {
-        "name": "Garden IPA",
-        "style": "IPA",
-        "image": "garden_ipa.jpg",
-        "abv": 6.5,
-        "ibu": 50,
-        "description": "Garden IPA je klasično američko pivo s naglašenom hmeljnom aromom.",
-        "price": 29.75,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
-    },
-    {
-        "name": "Garden Stout",
-        "style": "Stout",
-        "image": "garden_stout.jpg",
-        "abv": 6.2,
-        "ibu": 40,
-        "description": "Garden Stout je tamno pivo s bogatim okusom čokolade i kave.",
-        "price": 28.75,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
-    },
-    {
-        "name": "Garden Lager",
-        "style": "Lager",
-        "image": "garden_lager.jpg",
-        "abv": 4.5,
-        "ibu": 20,
-        "description": "Garden Lager je svijetlo pivo s blagim okusom i niskim udjelom alkohola.",
-        "price": 23.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
-    },
-    {
-        "name": "Garden Radler",
-        "style": "Radler",
-        "image": "garden_radler.jpg",
-        "abv": 2.5,
-        "ibu": 10,
-        "description": "Garden Radler je osvježavajuće pivo s dodatkom limuna.",
-        "price": 22.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
-    },
-    {
-        "name": "Garden Weizen",
-        "style": "Weizen",
-        "image": "garden_weizen.jpg",
+        "name": "Plavuša",
+        "style": "Blonde Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2023/05/brlog_plavusa_blonde_ale_05l_boca.jpg",
         "abv": 5.0,
-        "ibu": 15,
-        "description": "Garden Weizen je pšenično pivo s voćnim notama.",
-        "price": 24.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+        "ibu": 25,
+        "description": "Plavuša, american blonde ale. Pivo srednje punog tijela, dominantne su arome citrusa i bazge. Lako se sprijatelji s ekipom koja prvi put pije craft pivo!",
+        "price": 2.06,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
     },
     {
-        "name": "Garden APA",
-        "style": "APA",
-        "image": "garden_apa.jpg",
-        "abv": 5.5,
-        "ibu": 35,
-        "description": "Garden APA je osvježavajuće pivo s naglašenim aromama hmelja.",
-        "price": 25.5,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+        "name": "Neposlušna",
+        "style": "Amber Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2023/06/brlog_craft_beer_neposlusna_hoppy_red_ale_boca_05l.jpg",
+        "abv": 5.0,
+        "ibu": 33,
+        "description": "Neposlušna je red ale buntovnica bez filtera. Iznimno zahmeljeno (hoppy) pivo koje je neobično pitko. Dominantni okusi: gornje note livada, srednje tijelo. Raž, hmelj, začinjena kombinacija travnatih i sladnih okusa. Delikatesa za craft pivoljupce pa i vinoljupce. Užitak zahtjevnijem nepcu.",
+        "price": 2.38,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
     },
     {
-        "name": "Garden NEIPA",
-        "style": "NEIPA",
-        "image": "garden_neipa.jpg",
+        "name": "Špurija",
+        "style": "Stout",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/brlog-spurija-oatmeal-stout-1.jpg",
         "abv": 6.5,
-        "ibu": 50,
-        "description": "Garden NEIPA je klasično američko pivo s naglašenom hmeljnom aromom.",
-        "price": 29.75,
+        "ibu": 27,
+        "description": "Špurija – pitko crno pivo koje bi, da nema alkohola, pili već za doručak. Špurija je sanjarka. Vizionarka i osoba s kojom se ušuškaš pod dekicom i razgovaraš o smislu života. Ili šutiš i gledaš u zvijezde.",
+        "price": 2.43,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+    },
+    {
+        "name": "Bracera",
+        "style": "Blonde Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/familia-bracera-blonde.jpg",
+        "abv": 5.0,
+        "ibu": 24,
+        "description": "Bracera, lagano i osvježavajuće blonde ale pivo koje će vas odvesti na plovidbu mirnim morem nježnih aroma.",
+        "price": 2.06,
         "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Ferata",
+        "style": "Amber Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/FAMILIA-FERATA-AMBER.jpg",
+        "abv": 5.1,
+        "ibu": 30,
+        "description": "Ferata je red ale varijacija jantarno-crvene boje. Odlikuje se izrazitom pitkošću, pitome gorčine, s ugodnim primjesama karamelnog okusa i biljne arome. Glava je bogata, te prljavo-bijele boje.",
+        "price": 2.06,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Karet",
+        "style": "Lager",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/10/familia-karet-helles-lager.jpg",
+        "abv": 4.8,
+        "ibu": 20,
+        "description": "Karet je lager pivo, razigrana kombinacija tradicije i jednostavnosti.",
+        "price": 1.88,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Reoplan",
+        "style": "American Pale Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/familia-reoplan-apa.jpg",
+        "abv": 5.2,
+        "ibu": 35,
+        "description": "Reoplan, american pale ale pivo prepuno citrusnih i tropskih aroma. Bogato okusom i s ugodnom gorčinom.",
+        "price": 2.19,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+    },
+    {
+        "name": "Crna kraljica",
+        "style": "Schwarzbier",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/medvedgrad-crna-kraljica-schwarzbier.jpg",
+        "abv": 4.8,
+        "ibu": 20,
+        "description": "Crna kraljica crni je lager, schwarzbier, izraženog okusa i arome prženog slada i ječma, no izuzetnog balansa i pitkosti.",
+        "price": 1.64,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+    },
+    {
+        "name": "Grička vještica",
+        "style": "Doppelbock",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/medvedgrad-gricka-vjestica-033.jpg",
+        "abv": 7.5,
+        "ibu": 21,
+        "description": "Grička vještica ukusno je, kremasto i pitko pivo ugodne slatkoće te bogatog sladnog karaktera. Jako tamno lager pivo, doppelbock.",
+        "price": 1.76,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+    },
+    {
+        "name": "Fakin IPA",
+        "style": "India Pale Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/11/medvedgrad-fakin-ipa-05.jpg",
+        "abv": 7,
+        "ibu": 55,
+        "description": "Fakin IPA ima izraziti hmeljni karakter i gorčinu u okusu koja se fakinski neustrašivo spaja s bogatom voćnom aromom. Tri vrste slada, tri vrste hmelja. Dodatno se hmelji kako bi se postigla lijepa aroma i gorčina 55 IBU.",
+        "price": 2.19,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+    },
+    {
+        "name": "Zlatni medvjed",
+        "style": "Pilsner",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/medvedgrad-zlatni-medvjed-pilsner.jpg",
+        "abv": 4.4,
+        "ibu": 25,
+        "description": "Zlatni medvjed prirodan je craft lager kuhan od najboljeg pilsner slada te hmeljeva Aurora i Golding. Zlatnožute boje, osvježavajućeg okusa i ugodno gorkastog mirisa.",
+        "price": 1.56,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+    },
+    {
+        "name": "Gad",
+        "style": "Pilsner",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/tap-b-gad-pilsner.jpg",
+        "abv": 4.4,
+        "ibu": 17,
+        "description": "Gad je pivo zlatno-prozirne boje, jako pitko, na okus daje aromu ječmenog slada u kombinaciji sa blagom zahmeljenošću s Styrian hmeljem.",
+        "price": 1.88,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff4"}
+    },
+    {
+        "name": "Trapula",
+        "style": "American Pale Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/tapb-trapula-apa.jpg",
+        "abv": 5.0,
+        "ibu": 30,
+        "description": "Trapula (značenje: zamka/ klopka) je american pale ale koji će zarobiti sva vaša čula svojom ugodnom gorčinom, a pogotovo bogatom aromom i mirisom. Jedina zamka koju nećete željeti izbjeći, štoviše željet ćete u njoj biti što duže zarobljeni i uživati u aromama i mirisima tropskih i citrusnih nota.",
+        "price": 2.31,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff4"}
+    },
+    {
+        "name": "Walter White",
+        "style": "Blonde Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/tapb-walter-white-blonde.jpg",
+        "abv": 5.0,
+        "ibu": 18,
+        "description": "Za Waltera je korišreno dvije vrste njemačkog slada i dvije vrste hmelja, slovenski Styrian Golding i njemački Mandarina Bavaria. Walter White je pivo koje će vas lagano uvesti s industrijskog piva u raj craft piva, taman na granici, prijelaz iz jednog svijeta u drugi.",
+        "price": 2.06,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff4"}
+    },
+    {
+        "name": "Dolina",
+        "style": "Imperial Sour",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/11/the_garden_brewery_dolina_imperial_blueberry_lemon_vanillia_sour.jpg",
+        "abv": 7.1,
+        "ibu": 6,
+        "description": "Garden Dolina, imperial sour koji je od sada je dio stalne ponude The Garden Brewery-a. Kiselo pivo s vanilijom, borovnicama i lisabonskim limunima.",
+        "price": 3.18,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+    },
+    {
+        "name": "Obala",
+        "style": "New England Pale Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/11/the_garden_brewery_obala_new_england_pale_ale.jpg",
+        "abv": 4.7,
+        "ibu": 22,
+        "description": "Garden Obala, new england pale ale koji je od sada dio stalne ponuda The Garden Brewery-a. Glatko i tropsko. Pale koji se lako pije pun nota ananasa, limete, borovnice i mandarine.",
+        "price": 2.93,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+    },
+    {
+        "name": "Planina",
+        "style": "Double Imperial Affogato Stout",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2023/03/garden_brewery_planina_double_imperial_affogato_stout.jpg",
+        "abv": 10.3,
+        "ibu": 30,
+        "description": "Garden Planina, double imperial affogato stout, od sada dio stalne ponuda The Garden Brewery-a. Stout inspiriran talijanskim klasicima: esspressom, kakaom i madagaskarskom vanilijom.",
+        "price": 3.31,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+    },
+    {
+        "name": "Uvala",
+        "style": "Sour",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/11/the_garden_brewery_uvala_house_sour.jpg",
+        "abv": 3.5,
+        "ibu": 10,
+        "description": "Garden Uvala, sour koji je od sada je dio stalne ponude The Garden Brewery-a. Osvježavajuće pivo s notama ananasa i citrusa.",
+        "price": 2.81,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+    },
+    {
+        "name": "Zmajska Pale Ale",
+        "style": "Pale Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/zmajska-pale-ale-05.jpg",
+        "abv": 5.3,
+        "ibu": 38,
+        "description": "Zmajska pale ale, domaći klasik. Uravnotežene hmeljne i sladne note punog tijela i egzotičnih aroma manga i grejpa.",
+        "price": 2.19,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff6"}
+    },
+    {
+        "name": "Zmajska Pils",
+        "style": "Pilsner",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2022/04/zmajska-pils-boca-1.jpg",
+        "abv": 4.8,
+        "ibu": 35,
+        "description": "Pilsner je vrsta svijetlog lagera koji karakterizira donje vrenje. Njegova tajna je savršen omjer svježine i gorčine.",
+        "price": 1.94,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff6"}
+    },
+    {
+        "name": "Zmajska Pozoj",
+        "style": "India Pale Ale",
+        "image": "https://pomalo.shop/cms/wp-content/uploads/2023/05/zmajska_pozoj_ipa_limenka_05l.jpg",
+        "abv": 6.3,
+        "ibu": 70,
+        "description": "Pivo koje karakterizira srednje tijelo, velika zahmeljenost, citrusne i tropske note. Puno hmelja daje mu jaku gorčinu i osvježavajuću aromu grejpa uz sasvim malo ananasa i naranče.",
+        "price": 2.56,
+        "brewery": {"$oid": "65c7b86319c08024b60f3ff6"}
     }
 ]
