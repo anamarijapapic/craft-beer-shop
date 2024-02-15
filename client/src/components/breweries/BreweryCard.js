@@ -9,16 +9,12 @@ import {
   BsTrash,
 } from 'react-icons/bs';
 import { useAuth } from '../../context/AuthContext';
-import useDeleteBrewery from '../../hooks/breweries/useDeleteBrewery';
 
-const BreweryCard = ({ brewery }) => {
+const BreweryCard = ({ brewery, onDelete }) => {
   const { user } = useAuth();
-  const { deleteBrewery } = useDeleteBrewery();
 
-  const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this brewery?')) {
-      deleteBrewery(id);
-    }
+  const handleDelete = async () => {
+    onDelete();
   };
 
   return (
@@ -59,7 +55,7 @@ const BreweryCard = ({ brewery }) => {
               <Button
                 variant="light"
                 className="text-danger"
-                onClick={() => handleDelete(brewery._id)}
+                onClick={handleDelete}
               >
                 <BsTrash />
               </Button>

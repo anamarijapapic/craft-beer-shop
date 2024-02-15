@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
-const usePostLogin = (email, password) => {
+const usePostLogin = () => {
   const { login } = useAuth();
   const [error, setError] = useState(null);
   const navigate = useNavigate();

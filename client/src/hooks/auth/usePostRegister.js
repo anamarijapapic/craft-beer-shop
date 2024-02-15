@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const usePostRegister = (email, password) => {
+const usePostRegister = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 

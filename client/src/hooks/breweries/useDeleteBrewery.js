@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 
-const useDeleteBrewery = (id) => {
+const useDeleteBrewery = () => {
   const { authToken } = useAuth();
   const [error, setError] = useState(null);
 
-  const deleteBrewery = async (id) => {
+  const deleteBrewery = async (id, refetchBreweries) => {
     try {
       const response = await fetch(`http://localhost:5000/breweries/${id}`, {
         method: 'DELETE',
@@ -14,7 +14,7 @@ const useDeleteBrewery = (id) => {
         },
       });
       if (response.ok) {
-        window.location.reload();
+        refetchBreweries(); // Trigger refetch after deleting the brewery
       } else {
         setError('Failed to delete brewery');
       }

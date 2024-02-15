@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 
-const usePutUser = (id, userData) => {
+const usePutUser = () => {
   const { authToken } = useAuth();
   const [error, setError] = useState(null);
 
@@ -15,10 +15,8 @@ const usePutUser = (id, userData) => {
         },
         body: JSON.stringify(userData),
       });
-      if (response.ok) {
-        window.location.reload();
-      } else {
-        setError('Failed to update user');
+      if (!response.ok) {
+        throw new Error('Failed to update user');
       }
     } catch (error) {
       setError(error);

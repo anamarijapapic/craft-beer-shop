@@ -4,11 +4,19 @@ import { Link } from 'react-router-dom';
 import { BsFillPlusCircleFill } from 'react-icons/bs';
 import BreweryCard from './BreweryCard';
 import useGetBreweries from '../../hooks/breweries/useGetBreweries';
+import useDeleteBrewery from '../../hooks/breweries/useDeleteBrewery'; // Import useDeleteBrewery
 import { useAuth } from '../../context/AuthContext';
 
 const Breweries = () => {
   const { user } = useAuth();
-  const { breweries, loading, error } = useGetBreweries();
+  const { breweries, loading, error, refetchBreweries } = useGetBreweries();
+  const { deleteBrewery } = useDeleteBrewery();
+
+  const handleDeleteBrewery = async (id) => {
+    if (window.confirm('Are you sure you want to delete this brewery?')) {
+      deleteBrewery(id, refetchBreweries);
+    }
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -31,7 +39,10 @@ const Breweries = () => {
       <Row className="card-container" md={2} lg={3}>
         {breweries.map((brewery) => (
           <Col className="d-flex" key={brewery._id}>
-            <BreweryCard brewery={brewery} />
+            <BreweryCard
+              brewery={brewery}
+              onDelete={() => handleDeleteBrewery(brewery._id)}
+            />
           </Col>
         ))}
       </Row>

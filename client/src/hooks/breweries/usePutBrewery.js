@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
-const usePutBrewery = (id, breweryData) => {
+const usePutBrewery = () => {
   const { authToken } = useAuth();
   const [error, setError] = useState(null);
   const navigate = useNavigate();

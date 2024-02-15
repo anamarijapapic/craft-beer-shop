@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Table, Button, Modal, Form } from 'react-bootstrap';
 import { BsFloppyFill, BsPencilSquare, BsTrash } from 'react-icons/bs';
 import { useAuth } from '../../context/AuthContext';
@@ -8,28 +8,44 @@ import useDeleteUser from '../../hooks/users/useDeleteUser';
 
 const Users = () => {
   const { user } = useAuth();
-  const { users, loading, getError } = useGetUsers();
+  const { users, loading, getError, refetchUsers } = useGetUsers();
   const { putUser, putError } = usePutUser();
-  const { deleteUser } = useDeleteUser();
-  const [editUser, setEditUser] = useState(null); // State to manage edited user data
-  const [showEditModal, setShowEditModal] = useState(false); // State to manage modal visibility
+  const { deleteUser, deleteError } = useDeleteUser();
+  const [editUser, setEditUser] = useState(null);
+  const [showEditModal, setShowEditModal] = useState(false);
 
-  const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete this user?')) {
-      deleteUser(id);
+  useEffect(() => {
+    if (putError) {
+      console.error('Put Error:', putError);
     }
-  };
+  }, [putError]);
 
-  // Function to handle opening the modal for editing
+  useEffect(() => {
+    if (deleteError) {
+      console.error('Delete Error:', deleteError);
+    }
+  }, [deleteError]);
+
   const handleEdit = (userData) => {
     setEditUser(userData);
     setShowEditModal(true);
   };
 
-  // Function to handle closing the modal
   const handleCloseEditModal = () => {
     setEditUser(null);
     setShowEditModal(false);
+  };
+
+  const handleUpdateUser = async () => {
+    await putUser(editUser._id, editUser);
+    refetchUsers();
+    handleCloseEditModal();
+  };
+
+  const handleDelete = async (id) => {
+    if (window.confirm('Are you sure you want to delete this user?')) {
+      deleteUser(id, refetchUsers);
+    }
   };
 
   if (!user || !user.isAdmin) {
@@ -124,10 +140,7 @@ const Users = () => {
           <Button variant="secondary" onClick={handleCloseEditModal}>
             Close
           </Button>
-          <Button
-            variant="warning"
-            onClick={() => putUser(editUser._id, editUser)}
-          >
+          <Button variant="warning" onClick={handleUpdateUser}>
             <BsFloppyFill /> Update
           </Button>
         </Modal.Footer>

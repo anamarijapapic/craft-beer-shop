@@ -10,17 +10,13 @@ import {
 } from 'react-icons/bs';
 import { useAuth } from '../../context/AuthContext';
 import { useShop } from '../../context/ShopContext';
-import useDeleteBeer from '../../hooks/beers/useDeleteBeer';
 
-const BeerCard = ({ id, beer }) => {
+const BeerCard = ({ beer, onDelete }) => {
   const { user } = useAuth();
-  const { deleteBeer } = useDeleteBeer(id);
   const { addToCart, addToFavorites } = useShop();
 
-  const handleDelete = async (id) => {
-    if (window.confirm('Are you sure you want to delete ' + beer.name + '?')) {
-      deleteBeer(id);
-    }
+  const handleDelete = async () => {
+    onDelete();
   };
 
   const handleAddToCart = () => {
@@ -80,7 +76,7 @@ const BeerCard = ({ id, beer }) => {
               <Button
                 variant="light"
                 className="text-danger"
-                onClick={() => handleDelete(beer._id)}
+                onClick={handleDelete}
               >
                 <BsTrash />
               </Button>

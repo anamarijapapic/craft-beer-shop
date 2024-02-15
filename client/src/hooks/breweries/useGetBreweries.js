@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useAuth } from '../../context/AuthContext';
 
 const useGetBreweries = () => {
@@ -6,30 +6,38 @@ const useGetBreweries = () => {
   const [breweries, setBreweries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [version, setVersion] = useState(0); // State to trigger refetch
 
-  useEffect(() => {
-    const fetchBreweries = async () => {
-      try {
-        const response = await fetch('http://localhost:5000/breweries', {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setBreweries(data);
-        }
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
+  const fetchBreweries = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('http://localhost:5000/breweries', {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setBreweries(data);
+      } else {
+        throw new Error('Failed to fetch breweries');
       }
-    };
-
-    fetchBreweries();
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
   }, [authToken]);
 
-  return { breweries, loading, error };
+  const refetchBreweries = useCallback(() => {
+    setVersion((prevVersion) => prevVersion + 1); // Increment version to trigger refetch
+  }, []);
+
+  useEffect(() => {
+    fetchBreweries();
+  }, [fetchBreweries, version]); // Refetch when version changes
+
+  return { breweries, loading, error, refetchBreweries };
 };
 
 export default useGetBreweries;

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
-const usePostBeer = (beerData) => {
+const usePostBeer = () => {
   const { authToken } = useAuth();
   const [error, setError] = useState(null);
   const navigate = useNavigate();
