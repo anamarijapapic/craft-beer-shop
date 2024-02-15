@@ -7,7 +7,7 @@
         "ibu": 25,
         "description": "Plavuša, american blonde ale. Pivo srednje punog tijela, dominantne su arome citrusa i bazge. Lako se sprijatelji s ekipom koja prvi put pije craft pivo!",
         "price": 2.06,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+        "brewery": "65c7b86319c08024b60f3ff1"
     },
     {
         "name": "Neposlušna",
@@ -17,7 +17,7 @@
         "ibu": 33,
         "description": "Neposlušna je red ale buntovnica bez filtera. Iznimno zahmeljeno (hoppy) pivo koje je neobično pitko. Dominantni okusi: gornje note livada, srednje tijelo. Raž, hmelj, začinjena kombinacija travnatih i sladnih okusa. Delikatesa za craft pivoljupce pa i vinoljupce. Užitak zahtjevnijem nepcu.",
         "price": 2.38,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+        "brewery": "65c7b86319c08024b60f3ff1"
     },
     {
         "name": "Špurija",
@@ -27,7 +27,7 @@
         "ibu": 27,
         "description": "Špurija – pitko crno pivo koje bi, da nema alkohola, pili već za doručak. Špurija je sanjarka. Vizionarka i osoba s kojom se ušuškaš pod dekicom i razgovaraš o smislu života. Ili šutiš i gledaš u zvijezde.",
         "price": 2.43,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff1"}
+        "brewery": "65c7b86319c08024b60f3ff1"
     },
     {
         "name": "Bracera",
@@ -37,7 +37,7 @@
         "ibu": 24,
         "description": "Bracera, lagano i osvježavajuće blonde ale pivo koje će vas odvesti na plovidbu mirnim morem nježnih aroma.",
         "price": 2.06,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+        "brewery": "65c7b86319c08024b60f3ff2"
     },
     {
         "name": "Ferata",
@@ -47,7 +47,7 @@
         "ibu": 30,
         "description": "Ferata je red ale varijacija jantarno-crvene boje. Odlikuje se izrazitom pitkošću, pitome gorčine, s ugodnim primjesama karamelnog okusa i biljne arome. Glava je bogata, te prljavo-bijele boje.",
         "price": 2.06,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+        "brewery": "65c7b86319c08024b60f3ff2"
     },
     {
         "name": "Karet",
@@ -57,7 +57,7 @@
         "ibu": 20,
         "description": "Karet je lager pivo, razigrana kombinacija tradicije i jednostavnosti.",
         "price": 1.88,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+        "brewery": "65c7b86319c08024b60f3ff2"
     },
     {
         "name": "Reoplan",
@@ -67,7 +67,7 @@
         "ibu": 35,
         "description": "Reoplan, american pale ale pivo prepuno citrusnih i tropskih aroma. Bogato okusom i s ugodnom gorčinom.",
         "price": 2.19,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff2"}
+        "brewery": "65c7b86319c08024b60f3ff2"
     },
     {
         "name": "Crna kraljica",
@@ -77,7 +77,7 @@
         "ibu": 20,
         "description": "Crna kraljica crni je lager, schwarzbier, izraženog okusa i arome prženog slada i ječma, no izuzetnog balansa i pitkosti.",
         "price": 1.64,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+        "brewery": "65c7b86319c08024b60f3ff3"
     },
     {
         "name": "Grička vještica",
@@ -87,7 +87,7 @@
         "ibu": 21,
         "description": "Grička vještica ukusno je, kremasto i pitko pivo ugodne slatkoće te bogatog sladnog karaktera. Jako tamno lager pivo, doppelbock.",
         "price": 1.76,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+        "brewery": "65c7b86319c08024b60f3ff3"
     },
     {
         "name": "Fakin IPA",
@@ -97,7 +97,7 @@
         "ibu": 55,
         "description": "Fakin IPA ima izraziti hmeljni karakter i gorčinu u okusu koja se fakinski neustrašivo spaja s bogatom voćnom aromom. Tri vrste slada, tri vrste hmelja. Dodatno se hmelji kako bi se postigla lijepa aroma i gorčina 55 IBU.",
         "price": 2.19,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+        "brewery": "65c7b86319c08024b60f3ff3"
     },
     {
         "name": "Zlatni medvjed",
@@ -107,7 +107,7 @@
         "ibu": 25,
         "description": "Zlatni medvjed prirodan je craft lager kuhan od najboljeg pilsner slada te hmeljeva Aurora i Golding. Zlatnožute boje, osvježavajućeg okusa i ugodno gorkastog mirisa.",
         "price": 1.56,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff3"}
+        "brewery": "65c7b86319c08024b60f3ff3"
     },
     {
         "name": "Gad",
@@ -117,7 +117,7 @@
         "ibu": 17,
         "description": "Gad je pivo zlatno-prozirne boje, jako pitko, na okus daje aromu ječmenog slada u kombinaciji sa blagom zahmeljenošću s Styrian hmeljem.",
         "price": 1.88,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff4"}
+        "brewery": "65c7b86319c08024b60f3ff4"
     },
     {
         "name": "Trapula",
@@ -127,7 +127,7 @@
         "ibu": 30,
         "description": "Trapula (značenje: zamka/ klopka) je american pale ale koji će zarobiti sva vaša čula svojom ugodnom gorčinom, a pogotovo bogatom aromom i mirisom. Jedina zamka koju nećete željeti izbjeći, štoviše željet ćete u njoj biti što duže zarobljeni i uživati u aromama i mirisima tropskih i citrusnih nota.",
         "price": 2.31,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff4"}
+        "brewery": "65c7b86319c08024b60f3ff4"
     },
     {
         "name": "Walter White",
@@ -137,7 +137,7 @@
         "ibu": 18,
         "description": "Za Waltera je korišreno dvije vrste njemačkog slada i dvije vrste hmelja, slovenski Styrian Golding i njemački Mandarina Bavaria. Walter White je pivo koje će vas lagano uvesti s industrijskog piva u raj craft piva, taman na granici, prijelaz iz jednog svijeta u drugi.",
         "price": 2.06,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff4"}
+        "brewery": "65c7b86319c08024b60f3ff4"
     },
     {
         "name": "Dolina",
@@ -147,7 +147,7 @@
         "ibu": 6,
         "description": "Garden Dolina, imperial sour koji je od sada je dio stalne ponude The Garden Brewery-a. Kiselo pivo s vanilijom, borovnicama i lisabonskim limunima.",
         "price": 3.18,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+        "brewery": "65c7b86319c08024b60f3ff5"
     },
     {
         "name": "Obala",
@@ -157,7 +157,7 @@
         "ibu": 22,
         "description": "Garden Obala, new england pale ale koji je od sada dio stalne ponuda The Garden Brewery-a. Glatko i tropsko. Pale koji se lako pije pun nota ananasa, limete, borovnice i mandarine.",
         "price": 2.93,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+        "brewery": "65c7b86319c08024b60f3ff5"
     },
     {
         "name": "Planina",
@@ -167,7 +167,7 @@
         "ibu": 30,
         "description": "Garden Planina, double imperial affogato stout, od sada dio stalne ponuda The Garden Brewery-a. Stout inspiriran talijanskim klasicima: esspressom, kakaom i madagaskarskom vanilijom.",
         "price": 3.31,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+        "brewery": "65c7b86319c08024b60f3ff5"
     },
     {
         "name": "Uvala",
@@ -177,7 +177,7 @@
         "ibu": 10,
         "description": "Garden Uvala, sour koji je od sada je dio stalne ponude The Garden Brewery-a. Osvježavajuće pivo s notama ananasa i citrusa.",
         "price": 2.81,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff5"}
+        "brewery": "65c7b86319c08024b60f3ff5"
     },
     {
         "name": "Zmajska Pale Ale",
@@ -187,7 +187,7 @@
         "ibu": 38,
         "description": "Zmajska pale ale, domaći klasik. Uravnotežene hmeljne i sladne note punog tijela i egzotičnih aroma manga i grejpa.",
         "price": 2.19,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff6"}
+        "brewery": "65c7b86319c08024b60f3ff6"
     },
     {
         "name": "Zmajska Pils",
@@ -197,7 +197,7 @@
         "ibu": 35,
         "description": "Pilsner je vrsta svijetlog lagera koji karakterizira donje vrenje. Njegova tajna je savršen omjer svježine i gorčine.",
         "price": 1.94,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff6"}
+        "brewery": "65c7b86319c08024b60f3ff6"
     },
     {
         "name": "Zmajska Pozoj",
@@ -207,6 +207,6 @@
         "ibu": 70,
         "description": "Pivo koje karakterizira srednje tijelo, velika zahmeljenost, citrusne i tropske note. Puno hmelja daje mu jaku gorčinu i osvježavajuću aromu grejpa uz sasvim malo ananasa i naranče.",
         "price": 2.56,
-        "brewery": {"$oid": "65c7b86319c08024b60f3ff6"}
+        "brewery": "65c7b86319c08024b60f3ff6"
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff1"},
+        "_id": "65c7b86319c08024b60f3ff1",
         "name": "Brlog",
         "location": "Zadar, Hrvatska",
         "image": "https://cdn-kaaed.nitrocdn.com/fQIRFYprtEDISfMJxIkYXnfrkKBNCzYR/assets/images/optimized/rev-586c2a8/brlog.hr/wp-content/uploads/2021/12/Brlog-crni-logo-bez-pozadine.png",
@@ -8,7 +8,7 @@
         "website": "https://brlog.hr/"
     },
     {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff2"},
+        "_id": "65c7b86319c08024b60f3ff2",
         "name": "Familia",
         "location": "Kaštel Gomilica, Hrvatska",
         "image": "https://familia.hr/wp/wp-content/uploads/2017/07/logo-horizontal-black.png",
@@ -16,7 +16,7 @@
         "website": "https://familia.hr/"
     },
     {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff3"},
+        "_id": "65c7b86319c08024b60f3ff3",
         "name": "Pivovara Medvedgrad",
         "location": "Zagreb, Hrvatska",
         "image": "https://shop.pivovara-medvedgrad.hr/wp-content/uploads/2020/05/apple-touch-icon.png",
@@ -24,7 +24,7 @@
         "website": "https://pivovara-medvedgrad.hr/"
     },
     {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff4"},
+        "_id": "65c7b86319c08024b60f3ff4",
         "name": "Tap B Craft Brewery",
         "location": "Split, Hrvatska",
         "image": "https://www.tapb.hr/wp-content/uploads/2018/03/TapBlogo12-640x640.png",
@@ -32,7 +32,7 @@
         "website": "https://www.tapb.hr/"
     },
     {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff5"},
+        "_id": "65c7b86319c08024b60f3ff5",
         "name": "The Garden Brewery",
         "location": "Zagreb, Hrvatska",
         "image": "https://thegarden.hr/app/uploads/2021/04/the-garden-logo-1.svg",
@@ -40,7 +40,7 @@
         "website": "https://thegarden.hr/"
     },
     {
-        "_id": {"$oid": "65c7b86319c08024b60f3ff6"},
+        "_id": "65c7b86319c08024b60f3ff6",
         "name": "Zmajska pivovara",
         "location": "Zagreb, Hrvatska",
         "image": "https://zmajskapivovara.hr/wp-content/themes/ZmajskaPivovara01/images/zmajska_logo500px.PNG",
