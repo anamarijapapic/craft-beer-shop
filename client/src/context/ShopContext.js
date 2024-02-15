@@ -6,22 +6,32 @@ const ShopContext = createContext();
 
 export const ShopProvider = ({ children }) => {
   const { user } = useAuth();
-
-  const storedCart = user
-    ? JSON.parse(localStorage.getItem(`cart_${user._id}`)) || []
-    : [];
-  const storedFavorites = user
-    ? JSON.parse(localStorage.getItem(`favorites_${user._id}`)) || []
-    : [];
-  const [cartItems, setCartItems] = useState(storedCart);
-  const [favorites, setFavorites] = useState(storedFavorites);
+  const [cartItems, setCartItems] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
+    // Update stored cart and favorites data when user changes
     if (user) {
-      localStorage.setItem(`cart_${user._id}`, JSON.stringify(cartItems));
+      const storedCart =
+        JSON.parse(localStorage.getItem(`cart_${user._id}`)) || [];
+      const storedFavorites =
+        JSON.parse(localStorage.getItem(`favorites_${user._id}`)) || [];
+      setCartItems(storedCart);
+      setFavorites(storedFavorites);
+    }
+  }, [user]);
+
+  const updateCartLocalStorage = (cart) => {
+    if (user) {
+      localStorage.setItem(`cart_${user._id}`, JSON.stringify(cart));
+    }
+  };
+
+  const updateFavoritesLocalStorage = (favorites) => {
+    if (user) {
       localStorage.setItem(`favorites_${user._id}`, JSON.stringify(favorites));
     }
-  }, [cartItems, favorites, user]);
+  };
 
   const addToCart = (product) => {
     const existingItemIndex = cartItems.findIndex(
@@ -32,8 +42,11 @@ export const ShopProvider = ({ children }) => {
       const updatedCart = [...cartItems];
       updatedCart[existingItemIndex].quantity += 1;
       setCartItems(updatedCart);
+      updateCartLocalStorage(updatedCart);
     } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      const updatedCart = [...cartItems, { ...product, quantity: 1 }];
+      setCartItems(updatedCart);
+      updateCartLocalStorage(updatedCart);
     }
   };
 
@@ -52,6 +65,7 @@ export const ShopProvider = ({ children }) => {
       }
 
       setCartItems(updatedCart);
+      updateCartLocalStorage(updatedCart);
     }
   };
 
@@ -68,7 +82,9 @@ export const ShopProvider = ({ children }) => {
     );
 
     if (existingItemIndex === -1) {
-      setFavorites([...favorites, product]);
+      const updatedFavorites = [...favorites, product];
+      setFavorites(updatedFavorites);
+      updateFavoritesLocalStorage(updatedFavorites);
     }
   };
 
@@ -77,6 +93,7 @@ export const ShopProvider = ({ children }) => {
       (item) => item._id !== product._id
     );
     setFavorites(updatedFavorites);
+    updateFavoritesLocalStorage(updatedFavorites);
   };
 
   const clearFavorites = () => {

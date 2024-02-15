@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card, Stack } from 'react-bootstrap';
 import {
+  BsCartPlusFill,
   BsCartPlus,
+  BsHeartFill,
   BsHeart,
   BsInfoCircle,
   BsPencilSquare,
@@ -13,7 +15,12 @@ import { useShop } from '../../context/ShopContext';
 
 const BeerCard = ({ beer, onDelete }) => {
   const { user } = useAuth();
-  const { addToCart, addToFavorites } = useShop();
+  const { cartItems, favorites, addToCart, addToFavorites } = useShop();
+
+  const isBeerInCart = cartItems.some((cartItem) => cartItem._id === beer._id);
+  const isBeerInFavorites = favorites.some(
+    (favoriteBeer) => favoriteBeer._id === beer._id
+  );
 
   const handleDelete = async () => {
     onDelete();
@@ -57,10 +64,10 @@ const BeerCard = ({ beer, onDelete }) => {
         </div>
         <Stack direction="horizontal" className="justify-content-around mx-3">
           <Link onClick={handleAddToCart} className="btn btn-light">
-            <BsCartPlus />
+            {isBeerInCart ? <BsCartPlusFill /> : <BsCartPlus />}
           </Link>
           <Link onClick={handleAddToFavorites} className="btn btn-light">
-            <BsHeart />
+            {isBeerInFavorites ? <BsHeartFill /> : <BsHeart />}
           </Link>
           <Link to={`/beers/${beer._id}`} className="btn btn-light text-info">
             <BsInfoCircle />
