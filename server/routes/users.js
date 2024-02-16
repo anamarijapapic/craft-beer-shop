@@ -2,8 +2,10 @@ var express = require('express');
 var router = express.Router();
 const userController = require('../controllers/users');
 const requireAuth = require('../middleware/requireAuth');
+const requireAdmin = require('../middleware/requireAdmin');
 
-router.use(requireAuth);
+// These routes are for admin users only
+router.use(requireAuth, requireAdmin);
 
 router.get('/', userController.getUsers);
 router.get('/:id', userController.getUser);
