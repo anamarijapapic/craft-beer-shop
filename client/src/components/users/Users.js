@@ -5,14 +5,22 @@ import { useAuth } from '../../context/AuthContext';
 import useGetUsers from '../../hooks/users/useGetUsers';
 import usePutUser from '../../hooks/users/usePutUser';
 import useDeleteUser from '../../hooks/users/useDeleteUser';
+import useChangePassword from '../../hooks/users/useChangePassword';
 
 const Users = () => {
   const { user } = useAuth();
   const { users, loading, getError, refetchUsers } = useGetUsers();
   const { putUser, putError } = usePutUser();
   const { deleteUser, deleteError } = useDeleteUser();
+  const { changePassword, changePasswordError } = useChangePassword();
   const [editUser, setEditUser] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [showChangePasswordModal, setShowChangePasswordModal] = useState(false);
+  const [oldPassword, setOldPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+  const [passwordMatchError, setPasswordMatchError] = useState('');
 
   useEffect(() => {
     if (putError) {
@@ -25,6 +33,12 @@ const Users = () => {
       console.error('Delete Error:', deleteError);
     }
   }, [deleteError]);
+
+  useEffect(() => {
+    if (changePasswordError) {
+      console.error('Change Password Error:', changePasswordError);
+    }
+  }, [changePasswordError]);
 
   const handleEdit = (userData) => {
     setEditUser(userData);
@@ -45,6 +59,36 @@ const Users = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       deleteUser(id, refetchUsers);
+    }
+  };
+
+  const handleChangePassword = (userData) => {
+    setSelectedUser(userData);
+    setShowChangePasswordModal(true);
+  };
+
+  const handleCloseChangePasswordModal = () => {
+    setSelectedUser(null);
+    setShowChangePasswordModal(false);
+    setOldPassword('');
+    setNewPassword('');
+    setRepeatPassword('');
+    setPasswordMatchError('');
+  };
+
+  const handleSaveNewPassword = async () => {
+    // Check if passwords match
+    if (newPassword !== repeatPassword) {
+      setPasswordMatchError('Passwords do not match');
+      return;
+    }
+
+    try {
+      await changePassword(selectedUser._id, { oldPassword, newPassword });
+      handleCloseChangePasswordModal();
+      refetchUsers();
+    } catch (error) {
+      alert('Error changing password');
     }
   };
 
@@ -78,24 +122,33 @@ const Users = () => {
         <tbody>
           {users.map((u) => (
             <tr key={u._id}>
-              <td>{u.email}</td>
-              <td>{u.isAdmin.toString()}</td>
+              <td className="align-middle">{u.email}</td>
+              <td className="align-middle">{u.isAdmin.toString()}</td>
               <td>
-                <Button
-                  variant="light"
-                  className="text-warning"
-                  onClick={() => handleEdit(u)}
-                >
-                  <BsPencilSquare />
-                </Button>
                 {user.email !== u.email && (
-                  <Button
-                    variant="light"
-                    className="text-danger"
-                    onClick={() => handleDelete(u._id)}
-                  >
-                    <BsTrash />
-                  </Button>
+                  <>
+                    <Button
+                      variant="light"
+                      className="text-warning"
+                      onClick={() => handleEdit(u)}
+                    >
+                      <BsPencilSquare />
+                    </Button>
+                    <Button
+                      variant="light"
+                      className="text-warning"
+                      onClick={() => handleChangePassword(u)}
+                    >
+                      Change Password
+                    </Button>
+                    <Button
+                      variant="light"
+                      className="text-danger"
+                      onClick={() => handleDelete(u._id)}
+                    >
+                      <BsTrash />
+                    </Button>
+                  </>
                 )}
               </td>
             </tr>
@@ -142,6 +195,58 @@ const Users = () => {
           </Button>
           <Button variant="warning" onClick={handleUpdateUser}>
             <BsFloppyFill /> Update
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal
+        show={showChangePasswordModal}
+        onHide={handleCloseChangePasswordModal}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Change Password</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form.Group controlId="oldPassword">
+            <Form.Label>Old Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Enter old password"
+              value={oldPassword}
+              onChange={(e) => setOldPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="newPassword">
+            <Form.Label>New Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Enter new password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group controlId="repeatPassword">
+            <Form.Label>Repeat Password</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Repeat password"
+              value={repeatPassword}
+              onChange={(e) => setRepeatPassword(e.target.value)}
+            />
+            {passwordMatchError && (
+              <p className="text-danger">{passwordMatchError}</p>
+            )}
+          </Form.Group>
+          {changePasswordError && (
+            <p className="text-danger">{changePasswordError.message}</p>
+          )}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseChangePasswordModal}>
+            Close
+          </Button>
+          <Button variant="warning" onClick={handleSaveNewPassword}>
+            <BsFloppyFill /> Change Password
           </Button>
         </Modal.Footer>
       </Modal>

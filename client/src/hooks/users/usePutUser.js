@@ -20,6 +20,7 @@ const usePutUser = () => {
       }
     } catch (error) {
       setError(error);
+      throw error;
     }
   };
 

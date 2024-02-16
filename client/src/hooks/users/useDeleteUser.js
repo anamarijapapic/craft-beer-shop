@@ -19,6 +19,7 @@ const useDeleteUser = () => {
       refetchUsers(); // Trigger refetch after deleting the user
     } catch (error) {
       setError(error);
+      throw error;
     }
   };
 
