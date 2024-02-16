@@ -5,8 +5,16 @@ exports.getBeers = async (req, res) => {
     try {
         const beers = await Beer.find().populate('brewery');
 
+        // Sorting by brewery name
         if (req.query.sortBy === 'breweryName') {
-            beers.sort((a, b) => a.brewery.name.localeCompare(b.brewery.name));
+            const sortOrder = req.query.sortOrder === 'desc' ? -1 : 1;
+            beers.sort((a, b) => sortOrder * (a.brewery.name.localeCompare(b.brewery.name)));
+        }
+        
+        // Sorting by price
+        if (req.query.sortBy === 'price') {
+            const sortOrder = req.query.sortOrder === 'desc' ? -1 : 1;
+            beers.sort((a, b) => sortOrder * (a.price - b.price));
         }
 
         res.json(beers);

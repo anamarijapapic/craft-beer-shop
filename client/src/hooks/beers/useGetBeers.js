@@ -7,18 +7,24 @@ const useGetBeers = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [version, setVersion] = useState(0); // State to trigger refetch
+  const [sortBy, setSortBy] = useState(''); // State for sorting by price
 
   const fetchBeers = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch(
-        'http://localhost:5000/beers?sortBy=breweryName',
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        }
-      );
+      let url = 'http://localhost:5000/beers?sortBy=breweryName&sortOrder=asc'; // Default sorting by breweryName
+
+      if (sortBy === 'price_asc') {
+        url = 'http://localhost:5000/beers?sortBy=price&sortOrder=asc';
+      } else if (sortBy === 'price_desc') {
+        url = 'http://localhost:5000/beers?sortBy=price&sortOrder=desc';
+      }
+
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      });
       if (response.ok) {
         const data = await response.json();
         setBeers(data);
@@ -30,7 +36,7 @@ const useGetBeers = () => {
     } finally {
       setLoading(false);
     }
-  }, [authToken]);
+  }, [authToken, sortBy]);
 
   const refetchBeers = useCallback(() => {
     setVersion((prevVersion) => prevVersion + 1); // Increment version to trigger refetch
@@ -40,7 +46,7 @@ const useGetBeers = () => {
     fetchBeers();
   }, [fetchBeers, version]); // Refetch when version changes
 
-  return { beers, loading, error, refetchBeers };
+  return { beers, loading, error, refetchBeers, setSortBy };
 };
 
 export default useGetBeers;
