@@ -24,6 +24,11 @@ const Cart = () => {
     clearCart();
   };
 
+  const totalQuantity = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const totalPrice = cartItems
+    .reduce((acc, item) => acc + item.price * item.quantity, 0)
+    .toFixed(2);
+
   return (
     <Container className="mt-5">
       <h2>Shopping Cart</h2>
@@ -41,7 +46,7 @@ const Cart = () => {
               {item.name} ({item.brewery.name})
             </b>{' '}
             - Quantity: <b>{item.quantity}</b> - Total:{' '}
-            <b>{item.price * item.quantity} €</b>
+            <b>{(item.price * item.quantity).toFixed(2)} €</b>
             <Button
               variant="light"
               className="ms-3"
@@ -54,13 +59,7 @@ const Cart = () => {
       </ListGroup>
       <h4>Total:</h4>
       <p>
-        Quantity: <b>{cartItems.length}</b> Price:{' '}
-        <b>
-          {cartItems
-            .reduce((acc, item) => acc + item.price * item.quantity, 0)
-            .toFixed(2)}{' '}
-          €
-        </b>
+        Quantity: <b>{totalQuantity}</b> Price: <b>{totalPrice} €</b>
       </p>
 
       <h2>Favorites</h2>
