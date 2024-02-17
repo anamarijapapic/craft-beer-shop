@@ -7,7 +7,7 @@ const useDeleteBeer = () => {
 
   const deleteBeer = async (id, refetchBeers) => {
     try {
-      const response = await fetch(`http://localhost:5000/beers/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/beers/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${authToken}`,

@@ -153,15 +153,19 @@ Add functionality for a "shopping cart". The user has the ability to add/remove 
     ```sh
     cd client
     ```
-9. Install client dependencies
+9. Copy the `.env.local.example` file and rename it to `.env.local` in the client folder. Fill in the environment variables with your own values.
+    ```sh
+    cp .env.local.example .env.local
+    ```
+10. Install client dependencies
     ```sh
     npm install
     ```
-10. Start the client
+11. Start the client
     ```sh
     npm start
     ```
-11. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
+12. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
 
 ## Credits
 

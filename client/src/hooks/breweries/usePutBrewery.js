@@ -9,7 +9,7 @@ const usePutBrewery = () => {
 
   const putBrewery = async (id, breweryData) => {
     try {
-      const response = await fetch(`http://localhost:5000/breweries/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/breweries/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

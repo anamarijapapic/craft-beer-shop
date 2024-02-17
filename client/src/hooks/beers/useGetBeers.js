@@ -12,12 +12,12 @@ const useGetBeers = () => {
   const fetchBeers = useCallback(async () => {
     setLoading(true);
     try {
-      let url = 'http://localhost:5000/beers?sortBy=breweryName&sortOrder=asc'; // Default sorting by breweryName
+      let url = `${process.env.REACT_APP_API_URL}/beers?sortBy=breweryName&sortOrder=asc`; // Default sorting by breweryName
 
       if (sortBy === 'price_asc') {
-        url = 'http://localhost:5000/beers?sortBy=price&sortOrder=asc';
+        url = `${process.env.REACT_APP_API_URL}/beers?sortBy=price&sortOrder=asc`;
       } else if (sortBy === 'price_desc') {
-        url = 'http://localhost:5000/beers?sortBy=price&sortOrder=desc';
+        url = `${process.env.REACT_APP_API_URL}/beers?sortBy=price&sortOrder=desc`;
       }
 
       const response = await fetch(url, {

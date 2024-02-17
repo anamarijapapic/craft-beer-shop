@@ -9,7 +9,7 @@ const usePostLogout = () => {
 
   const postLogout = async () => {
     try {
-      const response = await fetch('http://localhost:5000/auth/logout', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/auth/logout`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${authToken}`,

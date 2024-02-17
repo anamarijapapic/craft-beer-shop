@@ -8,7 +8,7 @@ const useChangePassword = () => {
   const changePassword = async (id, passwordData) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/users/${id}/change-password`,
+        `${process.env.REACT_APP_API_URL}/users/${id}/change-password`,
         {
           method: 'PUT',
           headers: {
