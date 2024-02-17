@@ -25,10 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('*', cors({
-  origin: ['http://localhost:3000'],
-  credentials: true
-}));
+app.use(cors());
 
 app.use('/', indexRouter); // http://localhost:5000/
 app.use('/auth', authRouter); // http://localhost:5000/auth
