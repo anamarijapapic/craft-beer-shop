@@ -20,7 +20,7 @@ craft-beer-shop is a MERN stack application for a craft beer shop offering e-com
 > *University of Split - University Department of Professional Studies*
 
 <img width="500" alt="craft-beer-shop Home" src="https://github.com/anamarijapapic/craft-beer-shop/assets/92815435/b291c634-d10b-4da9-bf10-b11f8bb6aa78">
-<img width="500" align="top" alt="craft-beer-shop Cart and Favorites" src="https://github.com/user-attachments/assets/0fa49f34-8421-4ae7-9473-38eefa862861" />
+<img width="500" align="top" alt="craft-beer-shop Cart and Favorites" src="https://github.com/user-attachments/assets/3150bdb4-f85c-457f-8b5a-d4164cfc8de8" />
 <img width="800" alt="craft-beer-shop Beer Details" src="https://github.com/anamarijapapic/craft-beer-shop/assets/92815435/71efbe56-02b5-474c-83d8-93969992d086">
 
 ## Features
